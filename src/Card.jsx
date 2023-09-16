@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-const Card = ({name, image, price, id}) => {
+const Card = ({name, image, price, id, addToCart}) => {
     const [quantity, setQuantity] = useState(1);
 
 
@@ -29,7 +28,9 @@ const Card = ({name, image, price, id}) => {
                     onClick={() => setQuantity(quantity + 1)}
                 >+</button>
             </div>
-            <button>Add to Cart</button>
+            <button 
+                onClick={() => addToCart(id, quantity)}
+            >Add to Cart</button>
         </div>
     );
 }
@@ -39,6 +40,7 @@ Card.propTypes = {
     image: PropTypes.string,
     price: PropTypes.number,
     id: PropTypes.number,
+    addToCart: PropTypes.func,
 }
 
 export default Card;
