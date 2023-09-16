@@ -1,0 +1,9 @@
+.card > img {
+    width: 100%;
+}
+
+.cards {
+    display: grid;
+    align-items: end;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
