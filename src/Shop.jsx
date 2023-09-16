@@ -18,10 +18,12 @@ const Shop = ({ addToCart }) => {
             <div className='cards'>
                 {products.map(product =>
                     <Card 
-                        name={product.title}
-                        image={product.image}
-                        price={product.price}
-                        id={product.id}
+                        item={{
+                            name: product.title,
+                            image: product.image,
+                            price: product.price,
+                            id: product.id,
+                        }}
                         addToCart={addToCart}
                         key={product.id}
                     />

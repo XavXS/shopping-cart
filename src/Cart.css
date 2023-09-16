@@ -1,0 +1,7 @@
+.cart-bulk > img {
+    height: 150px;
+}
+
+.cart-bulk {
+    display: flex;
+}

@@ -9,29 +9,28 @@ const App = () => {
     const [cart, setCart] = useState([]);
 
     let numItems = 0;
-    cart.forEach(item => numItems += item.quantity)
+    cart.forEach(cartBulk => numItems += cartBulk.quantity)
 
-    const addToCart = (id, qty) => {
+    const addToCart = (item, quantity) => {
         let itemExists = false;
-        const newCart = cart.map(item => {
-            if(item.id === id) {
-                item.quantity += qty;
+        const newCart = cart.map(cartBulk => {
+            if(cartBulk.item.id === item.id) {
+                cartBulk.quantity += quantity;
                 itemExists = true;
-            } return item;
+            } return cartBulk;
         });
-        if(!itemExists) newCart.push({id: id, quantity: qty});
+        if(!itemExists) newCart.push({item: item, quantity: quantity});
         setCart(newCart);
     }
 
     const removeFromCart = (id) => {
-        setCart(cart.filter(item => item.id !== id));
+        setCart(cart.filter(cartBulk => cartBulk.item.id !== id));
     }
 
     const updateQuantity = (id, qty) => {
-        setCart(cart.map(item => {
-            if(item.id === id)
-                item.quantity = qty;
-            return item;
+        setCart(cart.map(cartBulk => {
+            if(cartBulk.item.id === id) cartBulk.quantity = qty;
+            return cartBulk;
         }));
     }
 

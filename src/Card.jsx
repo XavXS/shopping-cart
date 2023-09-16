@@ -1,17 +1,16 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-const Card = ({name, image, price, id, addToCart}) => {
+const Card = ({item, addToCart}) => {
     const [quantity, setQuantity] = useState(1);
-
 
     return (
         <div className='card'>
-            <img src={image}/>
-            <p>{name}</p>
-            <h3>${price}</h3>
+            <img src={item.image}/>
+            <p>{item.name}</p>
+            <h3>${item.price}</h3>
             <p>Quantity</p>
-            <div>
+            <div className='quantity'>
                 <button 
                     onClick={() => setQuantity(quantity - 1)}
                     disabled={quantity <= 1}
@@ -29,17 +28,14 @@ const Card = ({name, image, price, id, addToCart}) => {
                 >+</button>
             </div>
             <button 
-                onClick={() => addToCart(id, quantity)}
+                onClick={() => addToCart(item, quantity)}
             >Add to Cart</button>
         </div>
     );
 }
 
 Card.propTypes = {
-    name: PropTypes.string,
-    image: PropTypes.string,
-    price: PropTypes.number,
-    id: PropTypes.number,
+    item: PropTypes.object,
     addToCart: PropTypes.func,
 }
 
