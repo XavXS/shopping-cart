@@ -4,6 +4,7 @@ import Nav from './Nav';
 import Home from './Home';
 import Shop from './Shop';
 import Cart from './Cart';
+import './App.css';
 
 const App = () => {
     const [cart, setCart] = useState([]);

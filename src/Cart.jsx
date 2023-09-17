@@ -3,7 +3,7 @@ import './Cart.css';
 
 const Cart = ({ cart, removeFromCart, updateQuantity }) => {
     return (
-        <div className='cart'>
+        <div className='cart page'>
             <h1>Cart</h1>
             <div className='cart-bulks'>
                 {cart.map(cartBulk => 

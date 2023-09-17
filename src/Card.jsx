@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import './Card.css';
 
 const Card = ({item, addToCart}) => {
     const [quantity, setQuantity] = useState(1);
@@ -9,7 +10,6 @@ const Card = ({item, addToCart}) => {
             <img src={item.image}/>
             <p>{item.name}</p>
             <h3>${item.price}</h3>
-            <p>Quantity</p>
             <div className='quantity'>
                 <button 
                     onClick={() => setQuantity(quantity - 1)}
@@ -27,7 +27,8 @@ const Card = ({item, addToCart}) => {
                     onClick={() => setQuantity(quantity + 1)}
                 >+</button>
             </div>
-            <button 
+            <button
+                className='add-to-cart' 
                 onClick={() => addToCart(item, quantity)}
             >Add to Cart</button>
         </div>

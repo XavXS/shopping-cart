@@ -13,7 +13,7 @@ const Shop = ({ addToCart }) => {
     }, []);
 
     return (
-        <div className='home'>
+        <div className='shop page'>
             <h1>Shop</h1>
             <div className='cards'>
                 {products.map(product =>

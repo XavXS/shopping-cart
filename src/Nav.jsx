@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link, Outlet } from 'react-router-dom';
-import './Nav.css'
+import './Nav.css';
 
 function Nav({ numItems }) {
   return (
