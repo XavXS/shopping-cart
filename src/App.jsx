@@ -4,6 +4,7 @@ import Nav from './Nav';
 import Home from './Home';
 import Shop from './Shop';
 import Cart from './Cart';
+import Product from './Product';
 import './App.css';
 
 const App = () => {
@@ -45,16 +46,20 @@ const App = () => {
                     element: <Home /> 
                 },
                 { 
-                    path: 'Shop', 
+                    path: 'shop', 
                     element: <Shop addToCart={addToCart}/> 
                 },
                 { 
-                    path: 'Cart', 
+                    path: 'cart', 
                     element: <Cart 
                                 cart={cart} 
                                 removeFromCart={removeFromCart}
                                 updateQuantity={updateQuantity}
                             /> 
+                },
+                {
+                    path: 'product/:id',
+                    element: <Product addToCart={addToCart}/>
                 },
             ],
         }

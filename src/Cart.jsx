@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './Cart.css';
 
 const Cart = ({ cart, removeFromCart, updateQuantity }) => {
@@ -6,6 +7,7 @@ const Cart = ({ cart, removeFromCart, updateQuantity }) => {
         <div className='cart page'>
             <h1>Cart</h1>
             <div className='cart-bulks'>
+                {cart.length == 0 && <p>Your cart is empty</p>}
                 {cart.map(cartBulk => 
                     <div
                         className='cart-bulk'
@@ -13,8 +15,10 @@ const Cart = ({ cart, removeFromCart, updateQuantity }) => {
                     >
                         <img src={cartBulk.item.image}/>
                         <div className='bulk-desc'>
-                            <p>{cartBulk.item.name}</p>
-                            <p>Quantity</p>
+                            <Link to={'/product/' + cartBulk.item.id}>
+                                <p>{cartBulk.item.name}</p>
+                            </Link>
+                            <h3>${cartBulk.item.price}</h3>
                             <div className='quantity'>
                                 <button 
                                     onClick={() => updateQuantity(cartBulk.item.id, cartBulk.quantity - 1)}
@@ -33,11 +37,11 @@ const Cart = ({ cart, removeFromCart, updateQuantity }) => {
                                 >+</button>
                             </div>
                             <button
+                                className='remove-from-cart'
                                 onClick={
                                     () => removeFromCart(cartBulk.item.id)
                                 }
                             >remove</button>
-                            <h3>${cartBulk.item.price}</h3>
                         </div>
                     </div>
                 )}

@@ -1,7 +1,36 @@
+.cart-bulks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
 .cart-bulk > img {
-    height: 150px;
+    height: 128px;
 }
 
 .cart-bulk {
     display: flex;
+    gap: 64px;
+    width: 650px;
+    justify-content: space-between;
+}
+
+.bulk-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 4px;
+}
+
+.bulk-desc > a {
+    text-align: end;
+}
+
+.remove-from-cart {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 1rem;
+    border: 0;
+    cursor: pointer;
+    text-decoration: underline;
 }
