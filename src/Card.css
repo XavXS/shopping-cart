@@ -5,8 +5,9 @@
     gap: 8px;
 }
 
-.card > img {
-    width: 100%;
+.card-image {
+    width: 128px;
+    height: 128px;
 }
 
 .card > p, .card > img {

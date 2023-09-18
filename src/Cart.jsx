@@ -13,9 +13,19 @@ const Cart = ({ cart, removeFromCart, updateQuantity }) => {
                         className='cart-bulk'
                         key={cartBulk.item.id}
                     >
-                        <img src={cartBulk.item.image}/>
+                        <div className='cart-image'>
+                            <Link 
+                                className='image-link'
+                                to={'/product/' + cartBulk.item.id}
+                            >
+                                <img src={cartBulk.item.image}/>
+                            </Link>
+                        </div>
                         <div className='bulk-desc'>
-                            <Link to={'/product/' + cartBulk.item.id}>
+                            <Link 
+                                className='item-name' 
+                                to={'/product/' + cartBulk.item.id}
+                            >
                                 <p>{cartBulk.item.name}</p>
                             </Link>
                             <h3>${cartBulk.item.price}</h3>

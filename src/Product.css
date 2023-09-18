@@ -1,12 +1,29 @@
 .product {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-main {
+    display: flex;
     justify-content: center;
     margin-top: 128px;
     gap: 32px;
 }
 
-.product > img{
+.product-title {
+    text-align: start;
+}
+
+.product-image {
+    width: 256px;
     height: 256px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .product-details {
@@ -19,8 +36,7 @@
 .product-desc {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    text-align: start;
     margin-top: 64px;
     gap: 8px;
 }

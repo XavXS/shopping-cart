@@ -6,8 +6,15 @@ import './Card.css';
 const Card = ({item, addToCart}) => {
     return (
         <div className='card'>
-            <img src={item.image}/>
-            <Link to={'/product/' + item.id}>
+            <div className='card-image'>
+                <Link 
+                    className='image-link'
+                    to={'/product/' + item.id}
+                >
+                    <img src={item.image}/>
+                </Link>
+            </div>
+            <Link className='item-name' to={'/product/' + item.id}>
                 <p>{item.name}</p>
             </Link>
             <h3>${item.price}</h3>

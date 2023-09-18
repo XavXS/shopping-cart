@@ -22,7 +22,7 @@ const Shop = ({ addToCart }) => {
             <div className='cards'>
                 {
                     loading ? (
-                        <h2>Loading...</h2>
+                        <h2 className='loading'>Loading...</h2>
                     ) : (
                         products.map(product =>
                             <Card 

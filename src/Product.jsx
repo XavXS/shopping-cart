@@ -21,36 +21,38 @@ const Product = ({ addToCart }) => {
     }, [id]);
 
     return (
-        <>
             <div className='product page'>
                 {
                     loading ? (
-                        <h2>Loading...</h2>
+                        <h2 className='loading'>Loading...</h2>
                     ) : (
                         <>
-                            <img src={product.image}/>
-                            <div className='product-details'>
-                                <h3>{product.title}</h3>
-                                <h2>${product.price}</h2>
-                                <QuantityAddToCart
-                                    item={{
-                                        name: product.title,
-                                        image: product.image,
-                                        price: product.price,
-                                        id: product.id,
-                                    }}
-                                    addToCart={addToCart}
-                                />
+                            <div className='product-main'>                            
+                                <div className='product-image'>
+                                    <img src={product.image}/>
+                                </div>
+                                <div className='product-details'>
+                                    <h3 className='product-title'>{product.title}</h3>
+                                    <h2>${product.price}</h2>
+                                    <QuantityAddToCart
+                                        item={{
+                                            name: product.title,
+                                            image: product.image,
+                                            price: product.price,
+                                            id: product.id,
+                                        }}
+                                        addToCart={addToCart}
+                                    />
+                                </div>
+                            </div>
+                            <div className='product-desc'>
+                                <h4>Description</h4>
+                                <p>{product.description}</p>
                             </div>
                         </>
                     )
                 }
             </div>
-            <div className='product-desc'>
-                <h4>Description</h4>
-                <p>{product.description}</p>
-            </div>
-        </>
     );
 }
 

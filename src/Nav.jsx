@@ -6,9 +6,9 @@ function Nav({ numItems }) {
   return (
     <>
       <nav>
-        <Link to='/'><button>home</button></Link>
-        <Link to='shop'><button>shop</button></Link>
-        <Link to='cart'><button>cart ({numItems})</button></Link>
+        <Link to='/'><button>Home</button></Link>
+        <Link to='shop'><button>Shop</button></Link>
+        <Link to='cart'><button>Cart ({numItems})</button></Link>
       </nav>
       <Outlet />
     </>

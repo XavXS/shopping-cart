@@ -5,26 +5,39 @@
     gap: 8px;
 }
 
-.cart-bulk > img {
-    height: 128px;
-}
-
 .cart-bulk {
     display: flex;
     gap: 64px;
     width: 650px;
-    justify-content: space-between;
+
+}
+
+.cart-image {
+    width: 128px;
+    height: 128px;
+}
+
+.item-name:link, .item-name:visited, .item-name:active {
+    color: black;
+    text-decoration: none;
+    overflow: hidden;
+    max-height: 2.2rem;
+}
+
+.item-name:hover {
+    text-decoration: underline;
 }
 
 .bulk-desc {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: start;
     gap: 4px;
+    width: 100%;
 }
 
 .bulk-desc > a {
-    text-align: end;
+    text-align: start;
 }
 
 .remove-from-cart {
