@@ -36,6 +36,10 @@ const App = () => {
         }));
     }
 
+    const clearCart = () => {
+        setCart([]);
+    }
+
     const router = createBrowserRouter([
         {
             path: '/',
@@ -55,6 +59,7 @@ const App = () => {
                                 cart={cart} 
                                 removeFromCart={removeFromCart}
                                 updateQuantity={updateQuantity}
+                                clearCart={clearCart}
                             /> 
                 },
                 {

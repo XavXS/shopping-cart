@@ -1,0 +1,19 @@
+.home-image {
+    display: flex;
+    height: 850px;
+    flex-direction: column;   
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1495722281458-25edbdb08a1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1664&q=80');
+}
+
+.home-image h2 {
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.712);
+    color: white;
+    padding: 94px;
+    margin-top: 94px;
+}
+
+.shop-now {
+    margin-top: 16px;
+}

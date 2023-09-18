@@ -2,10 +2,12 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './Cart.css';
 
-const Cart = ({ cart, removeFromCart, updateQuantity }) => {
+const Cart = ({ cart, removeFromCart, updateQuantity, clearCart }) => {
+
     return (
         <div className='cart page'>
             <h1>Cart</h1>
+            <button className='check-out button' onClick={clearCart}>Check Out</button>
             <div className='cart-bulks'>
                 {cart.length == 0 && <p>Your cart is empty</p>}
                 {cart.map(cartBulk => 
@@ -64,6 +66,7 @@ Cart.propTypes = {
     cart: PropTypes.array,
     removeFromCart: PropTypes.func,
     updateQuantity: PropTypes.func,
+    clearCart: PropTypes.func,
 }
 
 export default Cart;

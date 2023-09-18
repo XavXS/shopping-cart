@@ -4,5 +4,5 @@
     grid-template-columns: repeat(5, 128px);
     justify-content: center;
     gap: 64px;
+    padding-bottom: 96px;
 }
-

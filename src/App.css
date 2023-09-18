@@ -10,6 +10,11 @@
     color: rgb(51, 51, 51);
 }
 
+#root {
+    position: relative;
+    min-height: 100vh;
+}
+
 .quantity {
     display: flex;
 }
@@ -60,6 +65,20 @@
     font-size: 2rem;
     margin-top: 32px;
     margin-bottom: 32px;
+}
+
+.button {
+    padding: 8px;
+    width: 256px;
+    font-size: 1.5rem;
+    background-color: rgb(65, 168, 175);
+    border: 0;
+    color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.397);
+}
+
+.button:hover {
+    background-color: rgb(73, 189, 197);
 }
 
 /* Chrome, Safari, Edge, Opera */
